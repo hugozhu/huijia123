@@ -1,0 +1,30 @@
+
+
+Started GET "/" for 127.0.0.1 at Tue Feb 01 23:06:00 +0800 2011
+
+Mysql2::Error (Unknown database 'huijia123_development'):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Feb 01 23:06:13 +0800 2011
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Feb 01 23:06:14 +0800 2011
+  Processing by WelcomeController#index as HTML
+Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/22.html" for 127.0.0.1 at Tue Feb 01 23:12:57 +0800 2011
+
+ActionController::RoutingError (No route matches "/22.html"):
+  
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
