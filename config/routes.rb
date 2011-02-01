@@ -45,14 +45,30 @@ Huijia123::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  resource :session, :only => [:new, :create, :destroy]
+  
+  resources :users do
+    member do
+      put :suspend
+      put :unsuspend
+      delete :purge
+    end
+  end
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => "welcome#index"
+  
+  match 'login' => 'sessions#new', :as => :login
+  match 'logout' => 'sessions#destroy', :as => :logout
+  match 'signup' => 'users#new', :as => :signup
+  # match 'register' => 'users#create', :as => :register
+  match 'activate/:activation_code' => 'users#activate', :as => :activate, :activation_code => nil
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+  match ':controller(/:action(/:id(.:format)))'
 end
