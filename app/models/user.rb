@@ -1,6 +1,10 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
+  has_many :lost_people
+  has_many :clues
+  has_many :responses  
+
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken
